@@ -7,14 +7,68 @@
     <link rel="stylesheet" type="text/css" href="sign-up-form-styles.css"/>
 </head>
 <body>
-    <div id="main-container">
-        <div class="photo">
-            <div class="icon">
-                
+    <div class="main-container">
+
+        <div class="lhs-container">
+            <div class='logo-container'>
+                <div class="logo-bg">
+                    <img class="logo-img" src="images/odin-lined.png" alt="Odin Logo">
+                    <span class="logo-text">Sign-Up Form</span>
+                </div>
+            </div>
+            <div class="lhs-text-container">
+                <p class="footer-text">© 2024 by Thomas McDonald</p>
+                <p class="footer-text">Photo by <a href="https://unsplash.com/@kajtek?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank">Kajetan Sumila</a> on <a href="https://unsplash.com/photos/sea-waves-crashing-on-shore-during-daytime-7vfm8_A2GXY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank">Unsplash</a>
+                </p>
             </div>
         </div>
-        <form id="sign-up-form" action="/sign-up-form-page" method="post">
-        </form>
+
+        <div class="rhs-container">
+            <div class="rhs-text-container">
+                <p class="form-header">This is not a real online service! This is just a demonstration to showcase my awesome form abilities!
+                                     <br><br>Sign up <em>now</em> to get started!
+                </p>
+            </div>
+            <div class="form-container">
+                <p class="form-header">Let's Do This!</p>
+                <form>
+                    <fieldset>
+                        <div class="form-group">
+                            <div class="form-field">
+                                <label for="first_name">Fist Name</label>
+                                <input type="text" id="first_name" name="first_name" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="last_name">Last Name</label>
+                                <input type="text" id="last_name" name="last_name" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="user_email">Email</label>
+                                <input type="email" id="user_email" name="user_email" required placeholder="your@email.com">
+                            </div>
+                            <div class="form-field">
+                                <label for="phone_number">Phone Number</label>
+                                <input type="text" id="phone_number" name="phone_number" placeholder="" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="username">Username</label>
+                                <input type="text" id="username" name="username" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="user_password">Password</label>
+                                <input type="text" id="user_password" name="user_password" required>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="form-submit-container">
+                <div class="submit-group">
+                    <input type="submit">
+                    <p class="login-link">Already have an account? <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">Login Here!</a></p>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
