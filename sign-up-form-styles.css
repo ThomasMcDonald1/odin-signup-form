@@ -21,7 +21,6 @@ body, html
 {
     display: flex;
     height: 100vh;
-    
     background-size: cover;
     overflow: hidden; 
     /* overflow: hidden hides the overflow on the page; without it, the overflow is present and an unwanted
@@ -34,6 +33,7 @@ body, html
 {
     flex-grow: 1;
     min-width: 300px;
+    padding-bottom: 20px;
 }
 
 .lhs-container
@@ -187,7 +187,7 @@ body, html
     font-size: 18px;
 }
 
-input[type=text], input[type=email]
+input[type=text], input[type=email], input[type=number], input[type=password]
 {
     background: rgb(240, 204, 163);
     border-radius: 4px;
@@ -199,24 +199,59 @@ input[type=text], input[type=email]
     outline: none;
 }
 
-input[type="text"]:valid, input[type=email]:valid
+input[type="text"]:valid, input[type=email]:valid , input[type=number]:valid
 {
     border: 1px solid #159660;
 }
 
-input[type="text"]:invalid, input[type=email]:invalid
+input[type="text"]:invalid, input[type=email]:invalid, input[type=number]:invalid
 {
     border: 1px solid #af3c07;
 }
 
-input[type=text]:hover, input[type=email]:hover
+input[type=text]:hover, input[type=email]:hover, input[type=number]:hover
 {
     border: 1px solid #4ab1da;
 }
 
-input[type=text]:focus, input[type=email]:focus
+input[type=text]:focus:invalid, input[type=email]:focus:invalid
 {
     border: 2px solid #d36a07;
+}
+
+input[type=text]:focus:valid, input[type=email]:focus:valid, input[type=number]:focus:valid
+{
+    border: 2px solid #07d35c;
+}
+
+.error
+{
+    display: block;
+    font-size: 12px;
+    color: red;
+    padding-top: 2px;
+    visibility: hidden;
+}
+
+#pass-error
+{
+    display: block;
+    font-size: 12px;
+    color: red;
+    padding-top: 2px;
+    visibility: hidden;
+}
+
+input + .error, input:valid + .error, input:invalid:placeholder-shown + .error
+{
+    display: block;
+    visibility: hidden;
+    font-size: 12px;
+}
+
+input:invalid:focus + .error, input:invalid + .error
+{
+    visibility: visible;
 }
 
 input[type=submit] 
